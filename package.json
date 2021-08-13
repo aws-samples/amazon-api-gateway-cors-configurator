@@ -1,0 +1,27 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@vueform/multiselect": "^2.0.0",
+    "axios": "^0.21.1",
+    "buefy": "^0.9.8",
+    "bulma": "^0.9.3",
+    "js-yaml": "^4.1.0",
+    "vue": "^3.0.5",
+    "vue-axios": "^3.2.4",
+    "vue3-clipboard": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "sass": "^1.35.1",
+    "tailwindcss": "^2.2.2",
+    "vite": "^2.3.8"
+  }
+}
