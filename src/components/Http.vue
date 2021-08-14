@@ -25,7 +25,7 @@ Description: CORS via Globals
 Globals:
   HttpApi:
     <span class="highlight">CorsConfiguration:
-      AllowedOrigin: <span v-if="data.AllowOrigins[0] == '*'">*</span><span v-else v-for="origin in data.AllowOrigins" :key="origin"><br/>        - {{origin}}</span>
+      AllowOrigin: <span v-if="data.AllowOrigins[0] == '*'">*</span><span v-else v-for="origin in data.AllowOrigins" :key="origin"><br/>        - {{origin}}</span>
       AllowHeaders: <span v-for="header in data.AllowHeaders" :key="header"><br/>        - {{header}}</span>
       AllowMethods: <span v-if="data.AllowMethods[0] == '*'">*</span><span v-else v-for="method in data.AllowMethods" :key="method"><br/>        - {{method}}</span></span>
 
@@ -48,7 +48,7 @@ Resources:
     Type: AWS::Serverless::HttpApi
     Properties:
       <span class="highlight">CorsConfiguration:
-        AllowedOrigin: <span v-if="data.AllowOrigins[0] == '*'">*</span><span v-else v-for="origin in data.AllowOrigins" :key="origin"><br/>          - {{origin}}</span>
+        AllowOrigin: <span v-if="data.AllowOrigins[0] == '*'">*</span><span v-else v-for="origin in data.AllowOrigins" :key="origin"><br/>          - {{origin}}</span>
         AllowHeaders: <span v-for="header in data.AllowHeaders" :key="header"><br/>          - {{header}}</span>
         AllowMethods: <span v-if="data.AllowMethods[0] == '*'">*</span><span v-else v-for="method in data.AllowMethods" :key="method"><br/>          - {{method}}</span></span>
 
@@ -92,7 +92,7 @@ Resources:
   statusCode: 200,
   body: {message: "Hello world"},
   headers: {
-    <span class="highlight">allow-access-control-origin: "{{p1Origin}}"</span>
+    <span class="highlight">access-control-allow-origin: "{{p1Origin}}"</span>
   }
 }</pre>
     </div>

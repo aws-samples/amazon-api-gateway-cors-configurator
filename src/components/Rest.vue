@@ -25,7 +25,7 @@ Description: CORS via Globals
 Globals:
   Api:
     <span class="highlight">Cors:
-      AllowedOrigin: "'{{data.AllowOrigins[0]}}'"
+      AllowOrigin: "'{{data.AllowOrigins[0]}}'"
       AllowHeaders: "'{{data.AllowHeaders.toString()}}'"
       AllowMethods: "'{{data.AllowMethods.toString()}}'"</span>
 
@@ -49,7 +49,7 @@ Resources:
     Properties:
       StageName: Prod
       <span class="highlight">Cors:
-        AllowedOrigin: "'{{data.AllowOrigins[0]}}'"
+        AllowOrigin: "'{{data.AllowOrigins[0]}}'"
         AllowHeaders: "'{{data.AllowHeaders.toString()}}'"
         AllowMethods: "'{{data.AllowMethods.toString()}}'"</span>
 ...
@@ -83,7 +83,7 @@ Resources:
   <span class="highlight">statusCode: 200,</span>
   body: {message: "Hello world"},
   headers: {
-    <span class="highlight">allow-access-control-origin: "{{data.AllowOrigins[0]}}"</span>
+    <span class="highlight">access-control-allow-origin: "{{data.AllowOrigins[0]}}"</span>
   }
 }
 </pre>
