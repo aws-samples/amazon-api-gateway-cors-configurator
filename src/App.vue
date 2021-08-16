@@ -5,9 +5,12 @@ SPDX-License-Identifier: Apache-2.0 -->
   <nav class="navbar is-info" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-item">
-        <h2 class="is-size-5">Amazon API Gateway CORS configuration generator</h2>
+        <h2 class="is-size-5">Amazon API Gateway CORS Configurator</h2>
       </div>
     </div>
+    <div class="navbar-end">
+        <a href="https://serverlessland.com" class="navbar-item">Return to Serverless Land</a>
+      </div>
   </nav>
 
   <section class="container is-fluid">
