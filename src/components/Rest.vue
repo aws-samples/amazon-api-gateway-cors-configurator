@@ -112,18 +112,19 @@ Resources:
 </template>
 
 <script setup>
-import { defineProps, computed, ref } from 'vue'
-import * as yaml from 'js-yaml'
+import { defineProps, computed} from 'vue'
 import { copyText } from 'vue3-clipboard'
 
 const props = defineProps({
-  data: {}
+  data: {},
+  auth: false
 })
 
 const warnings = computed(() => {
   let warn = []
   if(props.data.AllowOrigins[0] == "*") warn.push("While using the '*' option is possible, it is not best practice for security.")
   if(!props.data.AllowMethods.includes("OPTIONS") && !props.data.AllowMethods.includes("*")) warn.push("The OPTIONS method is not selected. This can affect your preflight requests.")
+  if(props.auth)warn.push("When using an authorizer, be sure to include the 'AddDefaultAuthorizerToCorsPreflight: false' to the authorizer configuration. This ensures that the token is not required for preflight.")
   return warn
 })
 

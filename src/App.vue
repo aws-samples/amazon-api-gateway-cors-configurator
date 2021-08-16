@@ -124,10 +124,10 @@ SPDX-License-Identifier: Apache-2.0 -->
       </div>
       <div v-if="cors.AllowOrigins && cors.AllowMethods" class="column is-three-quarters">
         <div v-if="v1">
-          <rest :data="cors"></rest>
+          <rest :data="cors" :auth="authorization"></rest>
         </div>
         <div v-else>
-          <http :data="cors"></http>
+          <http :data="cors" :auth="authorization"></http>
         </div>
       </div>
       <div v-else class="column">

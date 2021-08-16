@@ -134,7 +134,8 @@ import * as yaml from 'js-yaml'
 import { copyText } from 'vue3-clipboard'
 
 const props = defineProps({
-  data: {}
+  data: {},
+  auth: false
 })
 
 const p1Origin = computed(() => {
@@ -146,6 +147,7 @@ const warnings = computed(() => {
   let warn = []
   if(props.data.AllowOrigins[0] == "*") warn.push("While using the '*' option is possible, it is not best practice for security.")
   if(!props.data.AllowMethods.includes("OPTIONS") && !props.data.AllowMethods.includes("*")) warn.push("The OPTIONS method is not selected. This can affect your preflight requests.")
+  if(props.auth) warn.push("When using an authorizer, it is recommended to configure exact routes rathar than using the $default route option. When you enable CORS and authorization for the $default route, there are some special considerations. The $default route catches requests for all methods and routes that you haven't explicitly defined, including OPTIONS requests. To support unauthorized OPTIONS requests, add an OPTIONS /{proxy+} route to your API that doesn't require authorization. The OPTIONS /{proxy+} route has higher priority than the $default route. As a result, it enables clients to submit OPTIONS requests to your API without authorization.")
   return warn
 })
 
