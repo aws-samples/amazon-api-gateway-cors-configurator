@@ -5,7 +5,7 @@ SPDX-License-Identifier: Apache-2.0 -->
   <nav class="navbar is-info" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-item">
-        <h2 class="is-size-5">Amazon API Gateway CORS Configurator</h2>
+        <h2 class="is-size-5">Amazon API Gateway CORS Configurator (preview)</h2>
       </div>
     </div>
     <div class="navbar-end">
