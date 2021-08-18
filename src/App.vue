@@ -145,7 +145,8 @@ SPDX-License-Identifier: Apache-2.0 -->
             <p>
               Click on the <span class="icon has-text-info"><i class="fas fa-info-circle"></i></span> icon to learn about a property. A configuration requires an <strong>ORIGIN</strong> and at least one <strong>METHOD</strong>.
             </p>
-            <p>Read <a href="https://aws.amazon.com/blogs/compute/configuring-cors-on-amazon-api-gateway-apis/" target="_blank">the blog post.</a></p>
+            <p>Want to know more? Read <a href="https://aws.amazon.com/blogs/compute/configuring-cors-on-amazon-api-gateway-apis/" target="_blank">the blog post.</a></p>
+            <p>Found a problem or want to contribute? Go to the <a href="https://github.com/aws-samples/amazon-api-gateway-cors-configurator/issues" target="_blank">GitHub repo</a></p>
           </div>
         </div>
       </div>
