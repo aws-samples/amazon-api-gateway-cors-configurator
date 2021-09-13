@@ -157,14 +157,12 @@ SPDX-License-Identifier: Apache-2.0 -->
 <script>
 import Rest from './components/Rest.vue'
 import Http from './components/Http.vue'
-import CorsTester from './components/CorsTester.vue'
 import Multiselect from '@vueform/multiselect'
 
 export default{
   components: {
     Rest,
     Http,
-    CorsTester,
     Multiselect,
   },
   data(){
